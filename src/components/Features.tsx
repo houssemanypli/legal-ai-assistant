@@ -53,35 +53,37 @@ export const Features = () => {
         </div>
 
         {/* Main features with alternating layout */}
-        <div className="space-y-16 mb-16">
+        <div className="space-y-8 mb-16">
           {mainFeatures.map((feature, index) => (
             <Card 
               key={index}
-              className="p-8 lg:p-12 glass-card hover-lift animate-fade-in overflow-hidden"
+              className="p-6 lg:p-8 glass-card hover-lift animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}>
-                {/* Image */}
-                <div className="w-full lg:w-1/2 relative">
-                  <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-3xl rounded-full" />
+              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
+                {/* Image - Plus compacte */}
+                <div className="w-full lg:w-2/5 relative">
+                  <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-2xl rounded-full" />
                   <img 
                     src={featuresImage} 
                     alt={feature.title}
-                    className="relative rounded-2xl shadow-ai-glow w-full h-auto object-cover"
+                    className="relative rounded-xl shadow-ai-glow w-full h-auto object-cover max-h-64"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="w-full lg:w-1/2">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-ai flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-primary-foreground" />
+                <div className="w-full lg:w-3/5">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-ai flex items-center justify-center">
+                      <feature.icon className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-bold">{feature.title}</h3>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-6">{feature.title}</h3>
-                  <ul className="space-y-4">
+                  <ul className="space-y-3">
                     {feature.features.map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground text-lg">{item}</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
