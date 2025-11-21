@@ -47,12 +47,9 @@ export const Features = () => {
     <section className="py-24 px-4 bg-gradient-subtle">
       <div className="container">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold">
             Avec mon assistant, je peux...
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Une solution complète, intuitive et sécurisée
-          </p>
         </div>
 
         {/* Main features with alternating layout */}
