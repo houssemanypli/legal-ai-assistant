@@ -49,10 +49,10 @@ export const MarketTruths = () => {
                 <h3 className="text-lg font-bold leading-tight">{truth.title}</h3>
               </div>
               <div className="space-y-2">
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-base text-foreground leading-snug">
                   {truth.firstSentence}
                 </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-snug">
                   {truth.lastSentence}
                 </p>
               </div>
