@@ -1,36 +1,37 @@
 import { MessageSquare, FileSearch, FileEdit, Smartphone, Link2, Database } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import featuresImage from "@/assets/features-illustration.png";
 
 const mainFeatures = [
   {
     icon: MessageSquare,
-    title: "Poser toutes ses questions juridiques, simplement",
+    title: "Poser toutes mes questions juridiques, simplement",
     features: [
-      "Chat IA adapté aux non-experts",
-      "Langage clair, sans jargon",
-      "Réponses instantanées",
-      "Sources juridiques fiables et vérifiées"
+      "Un chat IA qui me comprend, même sans jargon",
+      "Des réponses claires et instantanées",
+      "Des sources juridiques fiables que je peux consulter",
+      "L'assurance d'informations vérifiées"
     ]
   },
   {
     icon: FileSearch,
-    title: "Analyser automatiquement ses documents",
+    title: "Analyser automatiquement mes documents",
     features: [
-      "Détection des risques juridiques",
-      "Résumés compréhensibles",
-      "Interrogation IA sur clauses spécifiques",
-      "Confidentialité (serveurs français)"
+      "Je détecte les risques juridiques cachés",
+      "J'obtiens des résumés compréhensibles",
+      "Je peux interroger l'IA sur des clauses précises",
+      "Mes données restent confidentielles (serveurs français)"
     ]
   },
   {
     icon: FileEdit,
-    title: "Générer et rédiger facilement des documents juridiques",
+    title: "Générer et rédiger mes documents juridiques facilement",
     features: [
-      "Modèles personnalisés",
-      "Reformulation ou rédaction de clauses",
-      "Assistance pédagogique",
-      "Explication de chaque terme"
+      "J'accède à des modèles personnalisés",
+      "Je reformule ou rédige mes clauses",
+      "Je bénéficie d'une assistance pédagogique",
+      "Chaque terme m'est expliqué clairement"
     ]
   }
 ];
@@ -47,32 +48,43 @@ export const Features = () => {
       <div className="container">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Fonctionnalités au service des petits Pros
+            Avec mon assistant, je peux...
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Une solution complète, intuitive et sécurisée
           </p>
         </div>
 
-        {/* Main features */}
-        <div className="space-y-12 mb-16">
+        {/* Main features with alternating layout */}
+        <div className="space-y-16 mb-16">
           {mainFeatures.map((feature, index) => (
             <Card 
               key={index}
-              className="p-8 glass-card hover-lift animate-fade-in"
+              className="p-8 lg:p-12 glass-card hover-lift animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-ai flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="w-8 h-8 text-primary-foreground" />
+              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}>
+                {/* Image */}
+                <div className="w-full lg:w-1/2 relative">
+                  <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-3xl rounded-full" />
+                  <img 
+                    src={featuresImage} 
+                    alt={feature.title}
+                    className="relative rounded-2xl shadow-ai-glow w-full h-auto object-cover"
+                  />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-6">{feature.title}</h3>
-                  <ul className="grid md:grid-cols-2 gap-4">
+
+                {/* Content */}
+                <div className="w-full lg:w-1/2">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-ai flex items-center justify-center mb-6">
+                    <feature.icon className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-6">{feature.title}</h3>
+                  <ul className="space-y-4">
                     {feature.features.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground text-lg">{item}</span>
                       </li>
                     ))}
                   </ul>
