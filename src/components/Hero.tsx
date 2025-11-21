@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-ai-legal.jpg";
 
 export const Hero = () => {
   return (
@@ -40,14 +39,19 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero image */}
-          <div className="relative animate-fade-in-delay">
-            <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-3xl rounded-full" />
-            <img 
-              src={heroImage} 
-              alt="Interface de l'assistant juridique IA" 
-              className="relative rounded-2xl shadow-ai-glow"
-            />
+          {/* Modern abstract visualization */}
+          <div className="relative h-[500px] animate-fade-in-delay">
+            {/* Central glow */}
+            <div className="absolute inset-0 bg-gradient-glow opacity-30 blur-3xl" />
+            
+            {/* Floating geometric shapes */}
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/20 rounded-3xl rotate-12 animate-float shadow-ai-glow" />
+            <div className="absolute bottom-1/3 right-1/4 w-40 h-40 bg-accent/20 rounded-full animate-float blur-sm" style={{ animationDelay: "1s" }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-xl" />
+            <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-primary/30 rounded-2xl -rotate-6 animate-float" style={{ animationDelay: "0.5s" }} />
+            
+            {/* Grid overlay effect */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           </div>
         </div>
       </div>

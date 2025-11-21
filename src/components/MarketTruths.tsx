@@ -4,49 +4,49 @@ import { Card } from "@/components/ui/card";
 const truths = [
   {
     icon: AlertCircle,
-    title: "Le juridique, un casse-tête quotidien",
-    description: "Les petits pros font face à des obligations légales complexes sans toujours avoir les compétences ou le temps. Le juridique devient une source de stress permanente — ils ont besoin d'être guidés, rassurés, protégés.",
+    title: "Des obligations complexes",
+    description: "Stress permanent face aux réglementations — besoin de guidance claire et fiable.",
     color: "text-destructive"
   },
   {
     icon: XCircle,
-    title: "Aucune solution vraiment adaptée aujourd'hui",
-    description: "L'offre actuelle se divise entre outils experts pour juristes ou plateformes grand public incomplètes. Rien ne répond aux besoins professionnels : accessibilité, simplicité, fiabilité et confidentialité.",
+    title: "Offre inadaptée",
+    description: "Outils trop experts ou plateformes trop simplistes. Aucune ne combine accessibilité et fiabilité.",
     color: "text-muted-foreground"
   },
   {
     icon: Shield,
-    title: "La Poste, un acteur de confiance légitime",
-    description: "Le juridique est un sujet sensible : sécurité des données, confidentialité, fiabilité des sources. La Poste, acteur historique de confiance numérique, est naturellement positionnée pour offrir un service juridique sécurisé et rassurant.",
+    title: "La Poste : confiance légitime",
+    description: "Acteur historique de confiance, naturellement positionné pour un service juridique sécurisé.",
     color: "text-primary"
   }
 ];
 
 export const MarketTruths = () => {
   return (
-    <section className="py-24 px-4 bg-background">
-      <div className="container">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+    <section className="py-16 px-4 bg-background">
+      <div className="container max-w-5xl">
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-3">
             3 vérités du marché
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground">
             Comprendre les tensions et l'opportunité
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {truths.map((truth, index) => (
             <Card 
               key={index}
-              className="p-8 glass-card hover-lift cursor-pointer animate-fade-in"
+              className="p-6 glass-card hover-lift cursor-pointer animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-ai flex items-center justify-center mb-6 ${truth.color}`}>
-                <truth.icon className="w-8 h-8 text-primary-foreground" />
+              <div className={`w-12 h-12 rounded-xl bg-gradient-ai flex items-center justify-center mb-4 ${truth.color}`}>
+                <truth.icon className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">{truth.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{truth.description}</p>
+              <h3 className="text-lg font-bold mb-2">{truth.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{truth.description}</p>
             </Card>
           ))}
         </div>
