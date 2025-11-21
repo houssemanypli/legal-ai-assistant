@@ -80,12 +80,12 @@ export const Features = () => {
                 </div>
 
                 {/* Image - Order changes based on index */}
-                <div className={`relative ${index === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div className={`relative ${index === 1 ? 'lg:order-1' : 'lg:order-2'} flex items-center justify-center`}>
                   <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-2xl rounded-full" />
                   <img 
                     src={featuresImage} 
                     alt={feature.title}
-                    className="relative rounded-xl shadow-ai-glow w-full h-auto object-cover"
+                    className="relative rounded-xl shadow-ai-glow w-full h-auto object-cover max-h-48 lg:max-h-56"
                   />
                 </div>
               </div>
