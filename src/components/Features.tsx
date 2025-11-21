@@ -57,24 +57,14 @@ export const Features = () => {
           {mainFeatures.map((feature, index) => (
             <Card 
               key={index}
-              className="p-6 lg:p-8 glass-card hover-lift animate-fade-in overflow-hidden"
+              className="p-6 lg:p-8 glass-card hover-lift animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
-                {/* Image - Plus compacte */}
-                <div className="w-full lg:w-2/5 relative">
-                  <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-2xl rounded-full" />
-                  <img 
-                    src={featuresImage} 
-                    alt={feature.title}
-                    className="relative rounded-xl shadow-ai-glow w-full h-auto object-cover max-h-64"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="w-full lg:w-3/5">
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                {/* Content - Order changes based on index */}
+                <div className={`${index === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-ai flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-ai flex items-center justify-center flex-shrink-0">
                       <feature.icon className="w-7 h-7 text-primary-foreground" />
                     </div>
                     <h3 className="text-xl lg:text-2xl font-bold">{feature.title}</h3>
@@ -87,6 +77,16 @@ export const Features = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                {/* Image - Order changes based on index */}
+                <div className={`relative ${index === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-2xl rounded-full" />
+                  <img 
+                    src={featuresImage} 
+                    alt={feature.title}
+                    className="relative rounded-xl shadow-ai-glow w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </Card>
