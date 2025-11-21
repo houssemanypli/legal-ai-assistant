@@ -5,19 +5,22 @@ const truths = [
   {
     icon: AlertCircle,
     title: "Le juridique, un casse-tête quotidien",
-    description: "Les petits pros font face à des obligations légales complexes sans toujours avoir les compétences ou le temps. Le juridique devient une source de stress permanente — ils ont besoin d'être guidés, rassurés, protégés.",
+    firstSentence: "Les petits pros font face à des obligations légales complexes sans toujours avoir les compétences ou le temps.",
+    lastSentence: "Le juridique devient une source de stress permanente — ils ont besoin d'être guidés, rassurés, protégés.",
     color: "text-destructive"
   },
   {
     icon: XCircle,
     title: "Aucune solution vraiment adaptée aujourd'hui",
-    description: "L'offre actuelle se divise entre outils experts pour juristes ou plateformes grand public incomplètes. Rien ne répond aux besoins professionnels : accessibilité, simplicité, fiabilité et confidentialité.",
+    firstSentence: "L'offre actuelle se divise entre outils experts pour juristes ou plateformes grand public incomplètes.",
+    lastSentence: "Rien ne répond aux besoins professionnels : accessibilité, simplicité, fiabilité et confidentialité.",
     color: "text-muted-foreground"
   },
   {
     icon: Shield,
     title: "La Poste, un acteur de confiance légitime",
-    description: "Le juridique est un sujet sensible : sécurité des données, confidentialité, fiabilité des sources. La Poste, acteur historique de confiance numérique, est naturellement positionnée pour offrir un service juridique sécurisé et rassurant.",
+    firstSentence: "Le juridique est un sujet sensible : sécurité des données, confidentialité, fiabilité des sources.",
+    lastSentence: "La Poste, acteur historique de confiance numérique, est naturellement positionnée pour offrir un service juridique sécurisé et rassurant.",
     color: "text-primary"
   }
 ];
@@ -39,13 +42,20 @@ export const MarketTruths = () => {
               className="p-6 glass-card hover-lift animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-ai flex items-center justify-center mb-4 ${truth.color}`}>
-                <truth.icon className="w-6 h-6 text-primary-foreground" />
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`w-12 h-12 rounded-xl bg-gradient-ai flex items-center justify-center flex-shrink-0 ${truth.color}`}>
+                  <truth.icon className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-lg font-bold leading-tight">{truth.title}</h3>
               </div>
-              <h3 className="text-lg font-bold mb-3">{truth.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {truth.description}
-              </p>
+              <div className="space-y-2">
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  {truth.firstSentence}
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {truth.lastSentence}
+                </p>
+              </div>
             </Card>
           ))}
         </div>
