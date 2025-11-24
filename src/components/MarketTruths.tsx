@@ -20,12 +20,20 @@ const truths = [
 ];
 
 export const MarketTruths = () => {
-  const { ref, isVisible } = useScrollAnimation(0.1);
+  const { ref, isVisible } = useScrollAnimation(0.15);
 
   return (
-    <section className="py-16 px-4 bg-background" ref={ref}>
-      <div className="container max-w-6xl">
-        <div className={`text-center mb-12 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+    <section className="py-16 px-4 bg-background relative overflow-hidden" ref={ref}>
+      {/* Parallax background shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" 
+             style={{ transform: isVisible ? 'translateY(0)' : 'translateY(50px)', transition: 'transform 1s ease-out' }} />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl" 
+             style={{ transform: isVisible ? 'translateY(0)' : 'translateY(50px)', transition: 'transform 1.2s ease-out' }} />
+      </div>
+      
+      <div className="container max-w-6xl relative z-10">
+        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl lg:text-4xl font-bold gradient-title-alt">
             Les signaux forts
           </h2>
@@ -35,8 +43,12 @@ export const MarketTruths = () => {
           {truths.map((truth, index) => (
             <Card 
               key={index}
-              className={`p-6 glass-card hover-lift hover-glow ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className={`p-6 glass-card hover-lift hover-glow transition-all duration-700 ${
+                isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
+              }`}
+              style={{ 
+                transitionDelay: `${index * 0.2}s`
+              }}
             >
               <h3 className="text-lg font-bold leading-tight mb-4 gradient-title">{truth.title}</h3>
               <div className="space-y-2">

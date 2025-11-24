@@ -1,12 +1,17 @@
 import { Sparkles } from "lucide-react";
+import { useParallax } from "@/hooks/useParallax";
 
 export const Hero = () => {
+  const parallax1 = useParallax(-0.2);
+  const parallax2 = useParallax(-0.3);
+  const parallax3 = useParallax(0.15);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
-      {/* Animated background particles */}
+      {/* Animated background particles with parallax */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
+        <div ref={parallax1} className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
+        <div ref={parallax2} className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
       </div>
 
       <div className="container relative z-10 px-4 py-20">
@@ -30,10 +35,10 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* Modern abstract visualization */}
+          {/* Modern abstract visualization with parallax */}
           <div className="relative h-[500px] animate-fade-in-delay">
             {/* Central glow */}
-            <div className="absolute inset-0 bg-gradient-glow opacity-30 blur-3xl" />
+            <div ref={parallax3} className="absolute inset-0 bg-gradient-glow opacity-30 blur-3xl" />
             
             {/* Floating geometric shapes */}
             <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/20 rounded-3xl rotate-12 animate-float shadow-ai-glow" />
