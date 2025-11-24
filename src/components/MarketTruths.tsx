@@ -24,7 +24,7 @@ export const MarketTruths = () => {
       <div className="container max-w-6xl">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl lg:text-4xl font-bold gradient-title-alt">
-            3 signaux forts
+            Les signaux forts
           </h2>
         </div>
 
@@ -35,7 +35,7 @@ export const MarketTruths = () => {
               className="p-6 glass-card hover-lift animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-lg font-bold leading-tight mb-4">{truth.title}</h3>
+              <h3 className="text-lg font-bold leading-tight mb-4 gradient-title">{truth.title}</h3>
               <div className="space-y-2">
                 <p className="text-base text-foreground leading-snug">
                   {truth.firstSentence}
