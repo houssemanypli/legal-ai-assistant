@@ -5,9 +5,8 @@ const pillars = [
     icon: Shield,
     title: "Sécurité & Confiance",
     values: [
-      "Confidentialité renforcée",
       "Données hébergées en France",
-      "Serveurs certifiés",
+      "Serveurs certifiés : confidentialité renforcée",
       "Fiabilité des sources juridiques"
     ]
   },
@@ -17,8 +16,7 @@ const pillars = [
     values: [
       "Interface claire et intuitive",
       "Langage vulgarisé pour non-juristes",
-      "Explications pédagogiques",
-      "Expérience rassurante"
+      "Explications pédagogiques"
     ]
   },
   {
@@ -26,7 +24,6 @@ const pillars = [
     title: "Personnalisation & Pertinence",
     values: [
       "Conseils adaptés à l'activité",
-      "Analyse personnalisée des documents",
       "Suggestions contextualisées",
       "Suivi progressif via historique"
     ]
