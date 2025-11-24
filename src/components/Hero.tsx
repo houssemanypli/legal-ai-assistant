@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 
 export const Hero = () => {
@@ -28,15 +27,6 @@ export const Hero = () => {
               Un service moderne, rassurant et toujours disponible qui démystifie le juridique. 
               Profitez d'une expertise professionnelle avec la confiance institutionnelle de La Poste.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="gradient-ai hover:shadow-ai-glow-hover transition-all duration-300">
-                Découvrir la solution
-              </Button>
-              <Button size="lg" variant="outline" className="hover-lift">
-                Voir les fonctionnalités
-              </Button>
-            </div>
           </div>
 
           {/* Modern abstract visualization */}
