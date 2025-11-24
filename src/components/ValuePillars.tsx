@@ -1,4 +1,5 @@
 import { Shield, Zap, Target } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const pillars = [
   {
@@ -31,10 +32,12 @@ const pillars = [
 ];
 
 export const ValuePillars = () => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   return (
-    <section className="py-24 px-4 bg-background">
+    <section className="py-24 px-4 bg-background" ref={ref}>
       <div className="container">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 gradient-title-alt">
             Une solution complète, intuitive et sécurisée
           </h2>
@@ -47,8 +50,8 @@ export const ValuePillars = () => {
           {pillars.map((pillar, index) => (
             <div 
               key={index}
-              className="text-center space-y-6 p-8 rounded-2xl bg-card border border-border hover-lift animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`text-center space-y-6 p-8 rounded-2xl bg-card border border-border hover-lift hover-glow ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="inline-flex w-20 h-20 rounded-full gradient-ai items-center justify-center shadow-ai-glow">
                 <pillar.icon className="w-10 h-10 text-primary-foreground" />

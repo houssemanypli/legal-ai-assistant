@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const truths = [
   {
@@ -19,10 +20,12 @@ const truths = [
 ];
 
 export const MarketTruths = () => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   return (
-    <section className="py-16 px-4 bg-background">
+    <section className="py-16 px-4 bg-background" ref={ref}>
       <div className="container max-w-6xl">
-        <div className="text-center mb-12 animate-fade-in">
+        <div className={`text-center mb-12 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <h2 className="text-3xl lg:text-4xl font-bold gradient-title-alt">
             Les signaux forts
           </h2>
@@ -32,8 +35,8 @@ export const MarketTruths = () => {
           {truths.map((truth, index) => (
             <Card 
               key={index}
-              className="p-6 glass-card hover-lift animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`p-6 glass-card hover-lift hover-glow ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <h3 className="text-lg font-bold leading-tight mb-4 gradient-title">{truth.title}</h3>
               <div className="space-y-2">
