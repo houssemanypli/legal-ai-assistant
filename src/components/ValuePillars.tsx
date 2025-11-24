@@ -54,7 +54,7 @@ export const ValuePillars = () => {
           </p>
         </div>
 
-        <div className={`grid lg:grid-cols-[30%_70%] gap-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+        <div className={`grid lg:grid-cols-[40%_60%] gap-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           {/* Colonne de gauche - Blocs de texte */}
           <div className="space-y-6">
             {pillars.map((pillar, index) => (
