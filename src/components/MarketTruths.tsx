@@ -5,8 +5,8 @@ const truths = [
   {
     icon: AlertCircle,
     title: "Le juridique, un vrai casse-tête pour les petits pro",
-    firstSentence: "Face aux obligations légales auxquelles ils font face, le volet juridique peut être synonyme de source de stress pour les petits pro, qui ne sont généralement pas ou compétents sur le sujet.",
-    lastSentence: "Le juridique devient une source de stress permanente — ils ont besoin d'être guidés, rassurés, protégés.",
+    firstSentence: "Face aux obligations légales auxquelles ils font face, le volet juridique est une source de stress pour les petits pro, peu ou pas compétents en la matière.",
+    lastSentence: "",
     color: "text-destructive"
   },
   {
@@ -52,9 +52,11 @@ export const MarketTruths = () => {
                 <p className="text-base text-foreground leading-snug">
                   {truth.firstSentence}
                 </p>
-                <p className="text-sm text-muted-foreground leading-snug">
-                  {truth.lastSentence}
-                </p>
+                {truth.lastSentence && (
+                  <p className="text-sm text-muted-foreground leading-snug">
+                    {truth.lastSentence}
+                  </p>
+                )}
               </div>
             </Card>
           ))}
