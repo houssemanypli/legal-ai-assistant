@@ -5,7 +5,7 @@ const truths = [
   {
     icon: AlertCircle,
     title: "Le juridique, un vrai casse-tête pour les petits pro",
-    firstSentence: "Face aux obligations légales auxquelles ils sont confrontés, le volet juridique est une source de stress pour les petits pro, peu ou pas compétents en la matière.",
+    firstSentence: "Face aux obligations légales auxquelles ils sont confrontés, le volet juridique est une source de stress pour les petits pro, peu compétents en la matière.",
     lastSentence: "Ils ont besoin d'être guidés, rassurés et protégés.",
     color: "text-destructive"
   },
