@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import featuresImage from "@/assets/features-illustration.png";
 import featureQuestions from "@/assets/feature-questions.png";
 import featureDocumentGeneration from "@/assets/feature-document-generation.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const mainFeatures = [
   {
@@ -42,10 +43,12 @@ const secondaryFeatures = [
 ];
 
 export const Features = () => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   return (
-    <section className="py-24 px-4 bg-gradient-subtle">
+    <section className="py-24 px-4 bg-gradient-subtle" ref={ref}>
       <div className="container">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <h2 className="text-4xl lg:text-5xl font-bold gradient-title-alt">
             Avec mon assistant, je peux...
           </h2>
@@ -56,8 +59,8 @@ export const Features = () => {
           {mainFeatures.map((feature, index) => (
             <Card 
               key={index}
-              className="p-6 lg:p-8 glass-card hover-lift animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`p-6 lg:p-8 glass-card hover-lift hover-glow ${isVisible ? (index % 2 === 0 ? 'animate-slide-left' : 'animate-slide-right') : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 {/* Content - Order changes based on index */}
