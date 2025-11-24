@@ -14,8 +14,8 @@ const truths = [
   },
   {
     title: "La Poste, un acteur de confiance légitime",
-    firstSentence: "Le juridique est un sujet sensible : sécurité des données, confidentialité, fiabilité des sources.",
-    lastSentence: "La Poste, acteur historique de confiance numérique, est naturellement positionnée pour offrir un service juridique sécurisé et rassurant."
+    firstSentence: "Le juridique est un sujet sensible où la sécurité des données, la confidentialité et la fiabilité des sources sont essentielles.",
+    lastSentence: "Le Groupe La Poste, acteur historique de confiance numérique, paraît être l'acteur de choix pour offrir une solution totalement sécurisée"
   }
 ];
 
