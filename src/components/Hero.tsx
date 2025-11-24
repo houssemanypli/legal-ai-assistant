@@ -19,8 +19,9 @@ export const Hero = () => {
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Découvrez l'assistant juridique IA{" "}
-              <span className="gradient-title">simple et fiable</span>, conçu pour les petits Pros
+              Découvrez{" "}
+              <span className="gradient-title">l'assistant juridique IA</span>{" "}
+              simple et fiable, conçu pour les petits Pros
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-2xl">
