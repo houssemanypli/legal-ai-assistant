@@ -8,30 +8,24 @@ const mainFeatures = [
     icon: MessageSquare,
     title: "Poser toutes mes questions juridiques, simplement",
     features: [
-      "Un chat IA qui me comprend, même sans jargon",
-      "Des réponses claires et instantanées",
-      "Des sources juridiques fiables que je peux consulter",
-      "L'assurance d'informations vérifiées"
+      "Des réponses instantanées avec des termes compréhensibles par tous",
+      "Des sources juridiques fiables que je peux consulter"
     ]
   },
   {
     icon: FileSearch,
     title: "Analyser automatiquement mes documents",
     features: [
-      "Je détecte les risques juridiques cachés",
-      "J'obtiens des résumés compréhensibles",
-      "Je peux interroger l'IA sur des clauses précises",
-      "Mes données restent confidentielles (serveurs français)"
+      "Vérification de conformité et détection des risques juridiques",
+      "Traduction du jargon en vocabulaire accessible"
     ]
   },
   {
     icon: FileEdit,
     title: "Générer et rédiger mes documents juridiques facilement",
     features: [
-      "J'accède à des modèles personnalisés",
-      "Je reformule ou rédige mes clauses",
-      "Je bénéficie d'une assistance pédagogique",
-      "Chaque terme m'est expliqué clairement"
+      "Aide à la rédaction de contenus juridiques",
+      "Modèles de documents juridiques"
     ]
   }
 ];
