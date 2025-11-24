@@ -43,11 +43,12 @@ export const MarketTruths = () => {
           {truths.map((truth, index) => (
             <Card 
               key={index}
-              className={`p-6 glass-card hover-lift hover-glow transition-all duration-700 ${
+              className={`p-6 glass-card hover-lift hover-glow transition-all duration-700 shadow-ai-glow border-2 ${
                 isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
               }`}
               style={{ 
-                transitionDelay: `${index * 0.2}s`
+                transitionDelay: `${index * 0.2}s`,
+                backgroundColor: 'hsl(var(--card) / 0.9)'
               }}
             >
               <h3 className="text-lg font-bold leading-tight mb-4 gradient-title">{truth.title}</h3>
