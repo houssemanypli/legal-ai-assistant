@@ -11,9 +11,9 @@ const truths = [
   },
   {
     icon: XCircle,
-    title: "Aucune solution vraiment adaptée aujourd'hui",
-    firstSentence: "L'offre actuelle se divise entre outils experts pour juristes ou plateformes grand public incomplètes.",
-    lastSentence: "Rien ne répond aux besoins professionnels : accessibilité, simplicité, fiabilité et confidentialité.",
+    title: "Un marché mal couvert",
+    firstSentence: "L'offre actuelle est fragmentée : entre outils d'experts pour les juristes et les plateformes grand public incomplètes, les petits pros sont aujourd'hui encore mal adressés",
+    lastSentence: "",
     color: "text-muted-foreground"
   },
   {
