@@ -12,8 +12,8 @@ const truths = [
   {
     icon: XCircle,
     title: "Un marché mal couvert enclin à des opportunités",
-    firstSentence: "Le paysage d'offres actuel est inadapté des petits pro.",
-    lastSentence: "Entre outils d'experts adressant les juristes et plateformes grand public incomplètes, aucune solution n'adresse de manière adéquate les problématiques rencontrées par cette cible.",
+    firstSentence: "Le paysage d'offres actuel est inadapté des petits pro. Entre outils d'experts adressant les juristes et plateformes grand public incomplètes, aucune solution n'adresse de manière adéquate les problématiques rencontrées par cette cible.",
+    lastSentence: "",
     color: "text-muted-foreground"
   },
   {
@@ -49,11 +49,11 @@ export const MarketTruths = () => {
                 <h3 className="text-lg font-bold leading-tight">{truth.title}</h3>
               </div>
               <div className="space-y-2">
-                <p className="text-base text-foreground leading-snug text-justify">
+                <p className="text-base text-foreground leading-snug">
                   {truth.firstSentence}
                 </p>
                 {truth.lastSentence && (
-                  <p className="text-base text-foreground leading-snug text-justify">
+                  <p className="text-base text-foreground leading-snug">
                     {truth.lastSentence}
                   </p>
                 )}
