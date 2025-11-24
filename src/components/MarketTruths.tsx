@@ -11,8 +11,8 @@ const truths = [
   },
   {
     icon: XCircle,
-    title: "Un marché mal couvert",
-    firstSentence: "L'offre actuelle est fragmentée : entre outils d'experts pour les juristes et les plateformes grand public incomplètes, les petits pros sont aujourd'hui encore mal adressés",
+    title: "Un marché mal couvert enclin à des opportunités",
+    firstSentence: "Le paysage d'offres actuel est inadapté aux besoins des petits pro. Entre les outils d'experts adressant les juristes et les plateformes grand public incomplètes, aucune solution n'adresse de manière adéquate les problématiques rencontrées par cette cible.",
     lastSentence: "",
     color: "text-muted-foreground"
   },
