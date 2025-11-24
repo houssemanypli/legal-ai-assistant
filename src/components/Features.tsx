@@ -2,7 +2,6 @@ import { MessageSquare, FileSearch, FileEdit, Smartphone, Link2, Database } from
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import featuresImage from "@/assets/features-illustration.png";
-import featureQuestions from "@/assets/feature-questions.png";
 
 const mainFeatures = [
   {
@@ -11,8 +10,7 @@ const mainFeatures = [
     features: [
       "Des réponses instantanées avec des termes compréhensibles par tous",
       "Des sources juridiques fiables que je peux consulter"
-    ],
-    image: featureQuestions
+    ]
   },
   {
     icon: FileSearch,
@@ -20,8 +18,7 @@ const mainFeatures = [
     features: [
       "Vérification de conformité et détection des risques juridiques",
       "Traduction du jargon en vocabulaire accessible"
-    ],
-    image: featuresImage
+    ]
   },
   {
     icon: FileEdit,
@@ -29,8 +26,7 @@ const mainFeatures = [
     features: [
       "Aide à la rédaction de contenus juridiques",
       "Modèles de documents juridiques"
-    ],
-    image: featuresImage
+    ]
   }
 ];
 
@@ -81,7 +77,7 @@ export const Features = () => {
                 <div className={`relative ${index === 1 ? 'lg:order-1' : 'lg:order-2'} flex items-center justify-center`}>
                   <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-2xl rounded-full" />
                   <img 
-                    src={feature.image} 
+                    src={featuresImage} 
                     alt={feature.title}
                     className="relative rounded-xl shadow-ai-glow w-full h-auto object-cover max-h-48 lg:max-h-56"
                   />
