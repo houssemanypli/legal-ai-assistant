@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import featuresImage from "@/assets/features-illustration.png";
 import featureQuestions from "@/assets/feature-questions.png";
+import featureDocumentGeneration from "@/assets/feature-document-generation.png";
 
 const mainFeatures = [
   {
@@ -30,7 +31,7 @@ const mainFeatures = [
       "Aide à la rédaction de contenus juridiques",
       "Modèles de documents juridiques"
     ],
-    image: featuresImage
+    image: featureDocumentGeneration
   }
 ];
 
