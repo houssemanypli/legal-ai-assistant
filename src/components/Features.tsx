@@ -29,7 +29,7 @@ const mainFeatures = [
     icon: FileEdit,
     title: "Générer et rédiger mes documents juridiques facilement",
     features: [
-      "Aide à la rédaction de contenus juridiques",
+      "Aide à la rédaction de contrats, devis, courriers, etc, conformes à la législation",
       "Modèles de documents juridiques"
     ],
     image: featureDocumentGeneration
