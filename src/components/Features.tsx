@@ -1,7 +1,7 @@
 import { MessageSquare, FileSearch, FileEdit, Smartphone, Link2, Database } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import featuresImage from "@/assets/features-illustration.png";
+import featureDocumentAnalysis from "@/assets/feature-document-analysis.png";
 import featureQuestions from "@/assets/feature-questions.png";
 import featureDocumentGeneration from "@/assets/feature-document-generation.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -23,7 +23,7 @@ const mainFeatures = [
       "Vérification de conformité et détection des risques juridiques",
       "Traduction du jargon en vocabulaire accessible"
     ],
-    image: featuresImage
+    image: featureDocumentAnalysis
   },
   {
     icon: FileEdit,
