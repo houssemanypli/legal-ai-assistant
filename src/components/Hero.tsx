@@ -30,8 +30,7 @@ export const Hero = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-2xl">
-              Un service moderne, rassurant et toujours disponible qui démystifie le juridique. 
-              Profitez d'une expertise professionnelle avec la confiance institutionnelle de La Poste.
+              Un service moderne, rassurant et toujours disponible qui démystifie le juridique, avec la confiance institutionnelle de La Poste.
             </p>
           </div>
 
