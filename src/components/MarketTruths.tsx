@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 const truths = [
   {
     icon: AlertCircle,
-    title: "le juridique, un vrai casse-tête pour les petits pro",
-    firstSentence: "Les petits pros font face à des obligations légales complexes sans toujours avoir les compétences ou le temps.",
+    title: "Le juridique, un vrai casse-tête pour les petits pro",
+    firstSentence: "Face aux obligations légales auxquelles ils font face, le volet juridique peut être synonyme de source de stress pour les petits pro, qui ne sont généralement pas ou compétents sur le sujet.",
     lastSentence: "Le juridique devient une source de stress permanente — ils ont besoin d'être guidés, rassurés, protégés.",
     color: "text-destructive"
   },
