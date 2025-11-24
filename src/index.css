@@ -8,6 +8,67 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Dark mode par défaut */
+    --background: 215 28% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 28% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 28% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Blue primary */
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Purple accent */
+    --accent: 270 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 28% 20%;
+    --input: 215 28% 17%;
+    --ring: 214 84% 56%;
+
+    --radius: 0.75rem;
+
+    /* Dégradés bleu/violet pour titres */
+    --gradient-title: linear-gradient(135deg, hsl(214, 84%, 65%) 0%, hsl(270, 70%, 60%) 100%);
+    --gradient-title-alt: linear-gradient(90deg, hsl(214, 84%, 60%) 0%, hsl(250, 70%, 65%) 50%, hsl(270, 70%, 60%) 100%);
+    --gradient-ai-blue: linear-gradient(135deg, hsl(214, 84%, 56%) 0%, hsl(214, 84%, 70%) 100%);
+    --gradient-ai-glow: linear-gradient(135deg, hsl(214, 84%, 56%) 0%, hsl(270, 70%, 60%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(215, 28%, 10%) 0%, hsl(215, 28%, 14%) 100%);
+    
+    /* Glass effect */
+    --glass-bg: hsla(215, 28%, 12%, 0.7);
+    --glass-border: hsla(214, 84%, 56%, 0.3);
+
+    /* Shadows with glow */
+    --shadow-glow: 0 8px 32px hsla(214, 84%, 56%, 0.25);
+    --shadow-glow-hover: 0 12px 48px hsla(214, 84%, 56%, 0.35);
+    --shadow-card: 0 2px 16px hsla(0, 0%, 0%, 0.4);
+    --shadow-purple-glow: 0 8px 32px hsla(270, 70%, 60%, 0.25);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
     --background: 0 0% 100%;
     --foreground: 215 25% 15%;
 
@@ -17,13 +78,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    /* La Poste blue - modernized */
     --primary: 214 84% 56%;
     --primary-foreground: 0 0% 100%;
-    
-    /* La Poste yellow - subtle accent */
-    --accent: 48 96% 53%;
-    --accent-foreground: 215 25% 15%;
+
+    --accent: 270 70% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --secondary: 214 32% 91%;
     --secondary-foreground: 214 84% 56%;
@@ -38,21 +97,19 @@ All colors MUST be HSL.
     --input: 214 32% 91%;
     --ring: 214 84% 56%;
 
-    --radius: 0.75rem;
-
-    /* AI-inspired gradients */
+    --gradient-title: linear-gradient(135deg, hsl(214, 84%, 50%) 0%, hsl(270, 70%, 55%) 100%);
+    --gradient-title-alt: linear-gradient(90deg, hsl(214, 84%, 50%) 0%, hsl(250, 70%, 55%) 50%, hsl(270, 70%, 55%) 100%);
     --gradient-ai-blue: linear-gradient(135deg, hsl(214, 84%, 56%) 0%, hsl(214, 84%, 70%) 100%);
-    --gradient-ai-glow: linear-gradient(135deg, hsl(214, 84%, 56%) 0%, hsl(48, 96%, 53%) 100%);
+    --gradient-ai-glow: linear-gradient(135deg, hsl(214, 84%, 56%) 0%, hsl(270, 70%, 60%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(214, 32%, 98%) 100%);
     
-    /* Glass effect */
     --glass-bg: hsla(0, 0%, 100%, 0.7);
     --glass-border: hsla(214, 84%, 56%, 0.2);
 
-    /* Shadows with AI glow */
     --shadow-glow: 0 8px 32px hsla(214, 84%, 56%, 0.15);
     --shadow-glow-hover: 0 12px 48px hsla(214, 84%, 56%, 0.25);
     --shadow-card: 0 2px 16px hsla(215, 25%, 15%, 0.08);
+    --shadow-purple-glow: 0 8px 32px hsla(270, 70%, 60%, 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -61,56 +118,6 @@ All colors MUST be HSL.
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 215 28% 10%;
-    --foreground: 0 0% 98%;
-
-    --card: 215 28% 12%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 215 28% 10%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 214 84% 56%;
-    --primary-foreground: 0 0% 100%;
-
-    --accent: 48 96% 53%;
-    --accent-foreground: 215 28% 10%;
-
-    --secondary: 215 28% 17%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 215 28% 17%;
-    --muted-foreground: 215 20% 65%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 215 28% 17%;
-    --input: 215 28% 17%;
-    --ring: 214 84% 56%;
-
-    --gradient-ai-blue: linear-gradient(135deg, hsl(214, 84%, 56%) 0%, hsl(214, 84%, 70%) 100%);
-    --gradient-ai-glow: linear-gradient(135deg, hsl(214, 84%, 56%) 0%, hsl(48, 96%, 53%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(215, 28%, 10%) 0%, hsl(215, 28%, 14%) 100%);
-    
-    --glass-bg: hsla(215, 28%, 12%, 0.7);
-    --glass-border: hsla(214, 84%, 56%, 0.3);
-
-    --shadow-glow: 0 8px 32px hsla(214, 84%, 56%, 0.25);
-    --shadow-glow-hover: 0 12px 48px hsla(214, 84%, 56%, 0.35);
-    --shadow-card: 0 2px 16px hsla(0, 0%, 0%, 0.4);
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -144,12 +151,30 @@ All colors MUST be HSL.
     background: var(--gradient-ai-glow);
   }
 
+  .gradient-title {
+    background: var(--gradient-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-title-alt {
+    background: var(--gradient-title-alt);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .shadow-ai-glow {
     box-shadow: var(--shadow-glow);
   }
 
   .shadow-ai-glow-hover {
     box-shadow: var(--shadow-glow-hover);
+  }
+
+  .shadow-purple-glow {
+    box-shadow: var(--shadow-purple-glow);
   }
 
   .animate-fade-in {

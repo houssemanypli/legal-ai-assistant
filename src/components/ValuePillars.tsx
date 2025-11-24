@@ -35,7 +35,7 @@ export const ValuePillars = () => {
     <section className="py-24 px-4 bg-background">
       <div className="container">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 gradient-title-alt">
             Une solution complète, intuitive et sécurisée
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

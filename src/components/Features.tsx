@@ -46,7 +46,7 @@ export const Features = () => {
     <section className="py-24 px-4 bg-gradient-subtle">
       <div className="container">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold">
+          <h2 className="text-4xl lg:text-5xl font-bold gradient-title-alt">
             Avec mon assistant, je peux...
           </h2>
         </div>

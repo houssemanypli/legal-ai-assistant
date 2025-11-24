@@ -59,9 +59,11 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-ai': 'var(--gradient-ai-blue)',
+  'gradient-ai': 'var(--gradient-ai-blue)',
         'gradient-glow': 'var(--gradient-ai-glow)',
         'gradient-subtle': 'var(--gradient-subtle)',
+        'gradient-title': 'var(--gradient-title)',
+        'gradient-title-alt': 'var(--gradient-title-alt)',
       },
       borderRadius: {
         lg: "var(--radius)",

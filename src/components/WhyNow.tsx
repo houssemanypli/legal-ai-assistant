@@ -11,7 +11,7 @@ export const WhyNow = () => {
               <span>Opportunité stratégique</span>
             </div>
             
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 gradient-title">
               Pourquoi maintenant ?
             </h2>
           </div>
