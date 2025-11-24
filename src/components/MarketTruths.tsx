@@ -23,7 +23,7 @@ export const MarketTruths = () => {
     <section className="py-16 px-4 bg-background">
       <div className="container max-w-6xl">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl lg:text-4xl font-bold">
+          <h2 className="text-3xl lg:text-4xl font-bold gradient-title-alt">
             3 signaux forts
           </h2>
         </div>
