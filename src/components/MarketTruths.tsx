@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 const truths = [
   {
     icon: AlertCircle,
-    title: "Le juridique, un casse-tête quotidien",
+    title: "le juridique, un vrai casse-tête pour les petits pro",
     firstSentence: "Les petits pros font face à des obligations légales complexes sans toujours avoir les compétences ou le temps.",
     lastSentence: "Le juridique devient une source de stress permanente — ils ont besoin d'être guidés, rassurés, protégés.",
     color: "text-destructive"
