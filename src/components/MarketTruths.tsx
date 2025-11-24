@@ -53,7 +53,7 @@ export const MarketTruths = () => {
                   {truth.firstSentence}
                 </p>
                 {truth.lastSentence && (
-                  <p className="text-sm text-muted-foreground leading-snug">
+                  <p className="text-base text-foreground leading-snug">
                     {truth.lastSentence}
                   </p>
                 )}
