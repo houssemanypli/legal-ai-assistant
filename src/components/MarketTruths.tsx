@@ -49,11 +49,11 @@ export const MarketTruths = () => {
                 <h3 className="text-lg font-bold leading-tight">{truth.title}</h3>
               </div>
               <div className="space-y-2">
-                <p className="text-base text-foreground leading-snug">
+                <p className="text-base text-foreground leading-snug text-justify">
                   {truth.firstSentence}
                 </p>
                 {truth.lastSentence && (
-                  <p className="text-base text-foreground leading-snug">
+                  <p className="text-base text-foreground leading-snug text-justify">
                     {truth.lastSentence}
                   </p>
                 )}
