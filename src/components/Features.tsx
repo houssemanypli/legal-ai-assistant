@@ -2,7 +2,7 @@ import { MessageSquare, FileSearch, FileEdit, Smartphone, Link2, Database } from
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import featuresImage from "@/assets/features-illustration.png";
-import featureQuestions from "@/assets/feature-questions.jpg";
+import featureQuestions from "@/assets/feature-questions.png";
 
 const mainFeatures = [
   {
@@ -83,7 +83,7 @@ export const Features = () => {
                   <img 
                     src={feature.image} 
                     alt={feature.title}
-                    className="relative rounded-xl shadow-ai-glow w-full h-auto object-cover max-h-48 lg:max-h-56"
+                    className="relative rounded-xl shadow-ai-glow w-full h-auto object-contain"
                   />
                 </div>
               </div>
