@@ -31,7 +31,7 @@ export const MarketTruths = () => {
       <div className="container max-w-6xl">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl lg:text-4xl font-bold">
-            3 vérités du marché
+            3 signaux forts
           </h2>
         </div>
 
