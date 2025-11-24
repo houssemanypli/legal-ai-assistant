@@ -9,8 +9,8 @@ const truths = [
   },
   {
     title: "Un marché mal couvert, enclin à des opportunités",
-    firstSentence: "Le paysage d'offres actuel est inadapté des petits pro.",
-    lastSentence: "Entre outils d'experts adressant les juristes et plateformes grand public incomplètes, aucune solution n'adresse de manière adéquate les problématiques rencontrées par cette cible."
+    firstSentence: "L'IA ouvre la voie à une expertise juridique accessible... Mais entre outils d'experts adressant les juristes et plateformes grand public incomplètes, aucune solution n'adresse de manière adéquate les problématiques rencontrées par cette cible.",
+    lastSentence: ""
   },
   {
     title: "La Poste, un acteur de confiance légitime",
