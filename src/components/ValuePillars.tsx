@@ -2,12 +2,12 @@ import { Shield, Zap, Target } from "lucide-react";
 
 const pillars = [
   {
-    icon: Shield,
-    title: "Sécurité & Confiance",
+    icon: Target,
+    title: "Personnalisation & Pertinence",
     values: [
-      "Données hébergées en France",
-      "Serveurs certifiés : confidentialité renforcée",
-      "Fiabilité des sources juridiques"
+      "Conseils adaptés à l'activité",
+      "Suggestions contextualisées",
+      "Suivi progressif via historique"
     ]
   },
   {
@@ -20,12 +20,12 @@ const pillars = [
     ]
   },
   {
-    icon: Target,
-    title: "Personnalisation & Pertinence",
+    icon: Shield,
+    title: "Sécurité & Confiance",
     values: [
-      "Conseils adaptés à l'activité",
-      "Suggestions contextualisées",
-      "Suivi progressif via historique"
+      "Données hébergées en France",
+      "Serveurs certifiés : confidentialité renforcée",
+      "Fiabilité des sources juridiques"
     ]
   }
 ];
