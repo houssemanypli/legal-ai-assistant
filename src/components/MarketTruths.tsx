@@ -1,69 +1,107 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import person from "@/assets/person.png";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const truths = [
   {
-    title: "Le juridique, un vrai casse-tête pour les petits pro",
-    firstSentence: "Face aux obligations légales auxquelles ils sont confrontés, le volet juridique est une source de stress pour les petits pro, peu compétents en la matière.",
-    lastSentence: "Ils ont besoin d'être guidés, rassurés et protégés."
+    title:
+      "Vous vous sentez perdus face à toutes les obligations légales auxquelles vous devez faire face dans le cadre de votre activité ?",
+    firstSentence:
+      "Vous n’êtes pas seuls : pour beaucoup de Pros, les questions juridiques représentent une grande source de stress au quotidien.",
+    lastSentence: "",
   },
   {
-    title: "Un marché mal couvert, enclin à des opportunités",
-    firstSentence: "L'IA ouvre la voie à une expertise juridique accessible... Mais entre outils d'experts adressant les juristes et plateformes grand public incomplètes, aucune solution n'adresse de manière adéquate les problématiques rencontrées par cette cible.",
-    lastSentence: ""
+    title:
+      "Vous aimeriez avoir accès à des conseils adaptés pour répondre à toutes vos interrogations au quotidien ? ",
+    firstSentence:
+      "Aujourd’hui, l’IA ouvre la voie à une expertise juridique accessible... Mais entre outils d’experts destinés aux juristes et chatbots grand public, aucune solution n’adresse réellement vos besoins.",
+    lastSentence: "",
   },
   {
-    title: "La Poste, un acteur de confiance légitime",
-    firstSentence: "Le juridique est un sujet sensible où la sécurité des données, la confidentialité et la fiabilité des sources sont essentielles.",
-    lastSentence: "Le Groupe La Poste, acteur historique de confiance numérique, paraît être l'acteur de choix pour offrir une solution totalement sécurisée"
-  }
+    title:
+      "Vous avez peur de confier vos données sur un sujet aussi sensible au premier acteur venu ? ",
+    firstSentence:
+      "Vous pouvez faire confiance au Groupe La Poste, un acteur historique de confiance numérique, pour assurer la confidentialité de vos échanges et la sécurité de vos données sur des serveurs certifiés basés en France.",
+    lastSentence: "",
+  },
 ];
 
 export const MarketTruths = () => {
   const { ref, isVisible } = useScrollAnimation(0.15);
 
   return (
-    <section className="py-16 px-4 bg-background relative overflow-hidden" ref={ref}>
+    <section
+      className="py-16 px-4 bg-background relative overflow-hidden"
+      ref={ref}
+    >
       {/* Parallax background shapes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" 
-             style={{ transform: isVisible ? 'translateY(0)' : 'translateY(50px)', transition: 'transform 1s ease-out' }} />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl" 
-             style={{ transform: isVisible ? 'translateY(0)' : 'translateY(50px)', transition: 'transform 1.2s ease-out' }} />
+        <div
+          className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"
+          style={{
+            transform: isVisible ? "translateY(0)" : "translateY(50px)",
+            transition: "transform 1s ease-out",
+          }}
+        />
+        <div
+          className="absolute bottom-20 right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl"
+          style={{
+            transform: isVisible ? "translateY(0)" : "translateY(50px)",
+            transition: "transform 1.2s ease-out",
+          }}
+        />
       </div>
-      
-      <div className="container max-w-6xl relative z-10">
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-3xl lg:text-4xl font-bold gradient-title-alt">
-            Les signaux forts
-          </h2>
-        </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {truths.map((truth, index) => (
-            <Card 
-              key={index}
-              className={`p-6 glass-card hover-lift hover-glow transition-all duration-700 shadow-ai-glow border-2 ${
-                isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
-              }`}
-              style={{ 
-                transitionDelay: `${index * 0.2}s`,
-                backgroundColor: 'hsl(var(--card) / 0.9)'
-              }}
-            >
-              <h3 className="text-lg font-bold leading-tight mb-4 gradient-title">{truth.title}</h3>
-              <div className="space-y-2">
-                <p className="text-base text-foreground leading-snug">
-                  {truth.firstSentence}
-                </p>
-                {truth.lastSentence && (
-                  <p className="text-base text-foreground leading-snug">
-                    {truth.lastSentence}
-                  </p>
-                )}
-              </div>
-            </Card>
-          ))}
+      <div className="container max-w-6xl relative z-10 flex items-center justify-center gap-12">
+        <img
+          src={person}
+          style={{ height: "300px" }}
+          className="animate-fade-in"
+        ></img>
+        <div style={{ paddingInline: "80px" }}>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {truths.map((truth, index) => (
+                <CarouselItem key={index}>
+                  <h3
+                    className="text-lg font-bold leading-tight mb-4"
+                    style={{ color: "#0D2073", fontSize: "26px" }}
+                  >
+                    {truth.title}
+                  </h3>
+                  <div className="space-y-2">
+                    <p
+                      className="text-base text-foreground leading-snug animate-fade-in"
+                      style={{
+                        color: "#0D2073",
+                        fontWeight: "300",
+                        fontSize: "16px",
+                      }}
+                    >
+                      {truth.firstSentence}
+                    </p>
+                    {truth.lastSentence && (
+                      <p
+                        className="text-base text-foreground leading-snug animate-fade-in"
+                        style={{ color: "#0D2073" }}
+                      >
+                        {truth.lastSentence}
+                      </p>
+                    )}
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>

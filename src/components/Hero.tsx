@@ -1,5 +1,6 @@
 import { Sparkles } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
+import hero from "@/assets/hero.png";
 
 export const Hero = () => {
   const parallax1 = useParallax(-0.2);
@@ -7,46 +8,54 @@ export const Hero = () => {
   const parallax3 = useParallax(0.15);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
-      {/* Animated background particles with parallax */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div ref={parallax1} className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div ref={parallax2} className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
+    <section className="relative min-h-[70vh]">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "end",
+          justifyContent: "end",
+          paddingBlock: "16px",
+          paddingInline: "32px",
+        }}
+        className="animate-fade-in"
+      >
+        <button
+          style={{
+            backgroundColor: "#53F3EA",
+            borderRadius: "12px",
+            height: "50px",
+            paddingInline: "60px",
+          }}
+        >
+          <span className="text-l" style={{ color: "#3244DB" }}>
+            Interrogez-moi !
+          </span>
+        </button>
       </div>
-
-      <div className="container relative z-10 px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text content */}
-          <div className="text-center lg:text-left space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary">
-              <Sparkles className="w-4 h-4" />
-              <span>Assistant juridique nouvelle génération</span>
+      <div className=" flex items-center justify-center overflow-hidden">
+        <div
+          className=" relative z-10 px-16 py-20"
+          style={{ backgroundColor: "#100559" }}
+        >
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text content */}
+            <div className="text-center lg:text-left space-y-8 animate-fade-in">
+              <h1
+                className="text-5xl lg:text-6xl font-bold leading-tight"
+                style={{ color: "#FFFFFF" }}
+              >
+                Découvrez <span className="gradient-title">Jean-mi</span>
+                {", "}
+                l’assistant qui vous accompagne dans vos{" "}
+                <span className="gradient-title">
+                  problématiques juridiques{" "}
+                </span>{" "}
+                du quotidien
+              </h1>
             </div>
-
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Découvrez{" "}
-              <span className="gradient-title">l'assistant juridique IA</span>{" "}
-              simple et fiable, conçu pour les petits Pros
-            </h1>
-
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Un service moderne, rassurant et toujours disponible qui démystifie le juridique, avec la confiance institutionnelle de La Poste.
-            </p>
-          </div>
-
-          {/* Modern abstract visualization with parallax */}
-          <div className="relative h-[500px] animate-fade-in-delay">
-            {/* Central glow */}
-            <div ref={parallax3} className="absolute inset-0 bg-gradient-glow opacity-30 blur-3xl" />
-            
-            {/* Floating geometric shapes */}
-            <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/20 rounded-3xl rotate-12 animate-float shadow-ai-glow" />
-            <div className="absolute bottom-1/3 right-1/4 w-40 h-40 bg-accent/20 rounded-full animate-float blur-sm" style={{ animationDelay: "1s" }} />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-xl" />
-            <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-primary/30 rounded-2xl -rotate-6 animate-float" style={{ animationDelay: "0.5s" }} />
-            
-            {/* Grid overlay effect */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+            <div style={{ justifyContent: "center", display: "flex" }}>
+              <img src={hero} style={{ width: "250px" }}></img>
+            </div>
           </div>
         </div>
       </div>

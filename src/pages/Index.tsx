@@ -12,10 +12,8 @@ const Index = () => {
       <Hero />
       <MarketTruths />
       <Features />
-      <ValuePillars />
       <UseCases />
       <Pricing />
-      <Footer />
     </div>
   );
 };
