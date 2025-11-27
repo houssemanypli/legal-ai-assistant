@@ -163,32 +163,42 @@ export const Pricing = () => {
                     ))}
                   </ul>
                 </div>
-                <Button
-                  className={`w-full ${
-                    plan.highlighted
-                      ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
-                      : "variant-outline"
-                  }`}
-                  variant={plan.highlighted ? "default" : "outline"}
-                  size="lg"
+                <div
                   style={{
-                    background: plan.highlighted
-                      ? "linear-gradient(90deg, #112372 4.81%, #53F3EA 100%)"
-                      : undefined,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
                   }}
                 >
-                  {plan.cta}
-                </Button>
-                <span
-                  style={{
-                    color: "#0D2073",
-                    fontWeight: "300",
-                    fontSize: "11px",
-                    textAlign: "center",
-                  }}
-                >
-                  Sans engagement - annulation à tout moment
-                </span>
+                  <Button
+                    className={`w-full ${
+                      plan.highlighted
+                        ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
+                        : "variant-outline"
+                    }`}
+                    variant={plan.highlighted ? "default" : "outline"}
+                    size="lg"
+                    style={{
+                      background: plan.highlighted
+                        ? "linear-gradient(90deg, #112372 4.81%, #53F3EA 100%)"
+                        : undefined,
+                    }}
+                  >
+                    {plan.cta}
+                  </Button>
+                  <p
+                    style={{
+                      color: "#0D2073",
+                      fontWeight: "300",
+                      fontSize: "11px",
+                      textAlign: "center",
+                    }}
+                  >
+                    Sans engagement - annulation à tout moment
+                  </p>
+                </div>
               </div>
             </div>
           ))}

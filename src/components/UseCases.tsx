@@ -7,18 +7,34 @@ import {
 } from "@/components/ui/carousel";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import mobile from "@/assets/mobile.png";
-import tools from "@/assets/tools.png";
+import vocal from "@/assets/vocal.png";
 
-const useCases = [
+import tools from "@/assets/tools.png";
+import tools2 from "@/assets/tools2.png";
+
+const useCasesMobile = [
   {
     title: "Dans la poche,",
     description: "depuis l’application mobile",
     image: mobile,
   },
   {
-    title: "Depuis vos outils",
-    description: "du Groupe La Poste",
+    title: "Dans la poche,",
+    description: "depuis l’application mobile",
+    image: vocal,
+  },
+];
+
+const useCasesPoste = [
+  {
+    title: "Dans la poche,",
+    description: "depuis l’application mobile",
     image: tools,
+  },
+  {
+    title: "Dans la poche,",
+    description: "depuis l’application mobile",
+    image: tools2,
   },
 ];
 
@@ -42,47 +58,111 @@ export const UseCases = () => {
         </div>
 
         <div
-          className={`mx-auto ${isVisible ? "animate-fade-in" : "opacity-0"}`}
           style={{
-            maxWidth: "25vw",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8rem",
           }}
         >
-          <Carousel className="w-full">
-            <CarouselContent>
-              {useCases.map((useCase, index) => (
-                <CarouselItem key={index}>
-                  <img
-                    src={useCase.image}
-                    style={{
-                      height: "250px",
-                      width: "100%",
-                      backgroundColor: index % 2 === 1 ? "#5F4FFF" : undefined,
-                    }}
-                  ></img>
-                  <div
-                    className="p-4 mt-2"
-                    style={{
-                      backgroundColor: "#0D2073",
-                      borderBottomLeftRadius: "8px",
-                      borderBottomRightRadius: "8px",
-                    }}
-                  >
-                    <h2
-                      className="text-bold text-2xl pb-2"
-                      style={{ color: "#FFFFFF" }}
-                    >
-                      {useCase.title}
-                    </h2>
-                    <p style={{ color: "#FFFFFF", fontWeight: "300" }}>
-                      {useCase.description}
-                    </p>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          <div
+            className={`${isVisible ? "animate-fade-in" : "opacity-0"}`}
+            style={{
+              maxWidth: "25vw",
+            }}
+          >
+            <Carousel className="w-full">
+              <CarouselContent>
+                {useCasesMobile.map((useCase, index) => (
+                  <CarouselItem key={index}>
+                    <img
+                      src={useCase.image}
+                      style={{
+                        height: "250px",
+                        width: "100%",
+                      }}
+                    ></img>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div
+                className="p-4 mt-2"
+                style={{
+                  backgroundColor: "#0D2073",
+                  borderBottomLeftRadius: "8px",
+                  borderBottomRightRadius: "8px",
+                }}
+              >
+                <h2
+                  className="text-bold text-3xl pb-2"
+                  style={{ color: "#FFFFFF" }}
+                >
+                  {useCasesMobile[0].title}
+                </h2>
+                <p
+                  style={{
+                    color: "#FFFFFF",
+                    fontWeight: "200",
+                    fontSize: "20px",
+                  }}
+                >
+                  {useCasesMobile[0].description}
+                </p>
+              </div>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+          <div
+            className={`${isVisible ? "animate-fade-in" : "opacity-0"}`}
+            style={{
+              maxWidth: "25vw",
+            }}
+          >
+            <Carousel className="w-full">
+              <CarouselContent>
+                {useCasesPoste.map((useCase, index) => (
+                  <CarouselItem key={index}>
+                    <img
+                      src={useCase.image}
+                      style={{
+                        height: "250px",
+                        width: "100%",
+                        backgroundColor:
+                          index % 2 === 1 ? "#0000FF" : "#5F4FFF",
+                      }}
+                    ></img>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div
+                className="p-4 mt-2"
+                style={{
+                  backgroundColor: "#0D2073",
+                  borderBottomLeftRadius: "8px",
+                  borderBottomRightRadius: "8px",
+                }}
+              >
+                <h2
+                  className="text-bold text-3xl pb-2"
+                  style={{ color: "#FFFFFF" }}
+                >
+                  Depuis vos outils
+                </h2>
+                <p
+                  style={{
+                    color: "#FFFFFF",
+                    fontWeight: "200",
+                    fontSize: "20px",
+                  }}
+                >
+                  du Groupe La Poste
+                </p>
+              </div>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>

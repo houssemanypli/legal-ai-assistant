@@ -8,53 +8,63 @@ export const Hero = () => {
   const parallax3 = useParallax(0.15);
 
   return (
-    <section className="relative min-h-[70vh]">
-      <div
-        style={{
-          display: "flex",
-          alignItems: "end",
-          justifyContent: "end",
-          paddingBlock: "16px",
-          paddingInline: "32px",
-        }}
-        className="animate-fade-in"
-      >
-        <button
-          style={{
-            backgroundColor: "#53F3EA",
-            borderRadius: "12px",
-            height: "50px",
-            paddingInline: "60px",
-          }}
-        >
-          <span className="text-l" style={{ color: "#3244DB" }}>
-            Interrogez-moi !
-          </span>
-        </button>
-      </div>
+    <section className="relative">
       <div className=" flex items-center justify-center overflow-hidden">
         <div
-          className=" relative z-10 px-16 py-20"
+          className=" relative z-10 px-24 py-20"
           style={{ backgroundColor: "#100559" }}
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text content */}
             <div className="text-center lg:text-left space-y-8 animate-fade-in">
               <h1
-                className="text-5xl lg:text-6xl font-bold leading-tight"
-                style={{ color: "#FFFFFF" }}
+                className="font-bold leading-tight"
+                style={{
+                  color: "#FFFFFF",
+                  fontWeight: "100",
+                  fontSize: "45px",
+                }}
               >
-                Découvrez <span className="gradient-title">Jean-mi</span>
-                {", "}
+                <p
+                  style={{
+                    fontWeight: "800",
+                    fontSize: "61px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Découvrez <span className="gradient-title">Jean-mi</span>
+                  {", "}
+                </p>
                 l’assistant qui vous accompagne dans vos{" "}
                 <span className="gradient-title">
                   problématiques juridiques{" "}
                 </span>{" "}
                 du quotidien
               </h1>
+              <div className="animate-fade-in">
+                <button
+                  style={{
+                    backgroundColor: "#38EDFE",
+                    borderRadius: "8px",
+                    padding: "12px",
+                  }}
+                >
+                  <span
+                    className="text-l"
+                    style={{
+                      color: "#100559",
+                      fontSize: "16px",
+                      fontWeight: "700",
+                      letterSpacing: "0px",
+                    }}
+                  >
+                    Demander une démo
+                  </span>
+                </button>
+              </div>
             </div>
             <div style={{ justifyContent: "center", display: "flex" }}>
-              <img src={hero} style={{ width: "250px" }}></img>
+              <img src={hero} style={{ width: "420px", height: "300px" }}></img>
             </div>
           </div>
         </div>
