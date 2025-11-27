@@ -12,9 +12,19 @@ export const Hero = () => {
       <div className=" flex items-center justify-center overflow-hidden">
         <div
           className=" relative z-10  py-20"
-          style={{ backgroundColor: "#100559", paddingInline: "165px" }}
+          style={{
+            backgroundColor: "#100559",
+            paddingInline: "165px",
+            width: "100%",
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+          }}
         >
-          <div className="grid lg:grid-cols-2 gap-36 items-center">
+          <div
+            className="grid lg:grid-cols-2 gap-36 items-center"
+            style={{ maxWidth: "1380px" }}
+          >
             {/* Text content */}
             <div className="text-center lg:text-left space-y-8 animate-fade-in">
               <h1
