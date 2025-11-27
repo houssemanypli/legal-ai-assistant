@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const plans = [
   {
     name: "Essentiel",
-    description: "Idéale pour découvrir Jean-mi",
+    description: "Idéale pour découvrir judi",
     price: "0€/",
     features: [
       "10 questions juridiques / mois",

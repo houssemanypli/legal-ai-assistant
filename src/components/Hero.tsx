@@ -11,10 +11,10 @@ export const Hero = () => {
     <section className="relative">
       <div className=" flex items-center justify-center overflow-hidden">
         <div
-          className=" relative z-10 px-24 py-20"
-          style={{ backgroundColor: "#100559" }}
+          className=" relative z-10  py-20"
+          style={{ backgroundColor: "#100559", paddingInline: "165px" }}
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-36 items-center">
             {/* Text content */}
             <div className="text-center lg:text-left space-y-8 animate-fade-in">
               <h1
@@ -32,7 +32,7 @@ export const Hero = () => {
                     marginBottom: "12px",
                   }}
                 >
-                  Découvrez <span className="gradient-title">Jean-mi</span>
+                  Découvrez <span className="gradient-title">judi</span>
                   {", "}
                 </p>
                 l’assistant qui vous accompagne dans vos{" "}
@@ -64,7 +64,13 @@ export const Hero = () => {
               </div>
             </div>
             <div style={{ justifyContent: "center", display: "flex" }}>
-              <img src={hero} style={{ width: "420px", height: "300px" }}></img>
+              <img
+                src={hero}
+                style={{
+                  width: "500px",
+                  objectFit: "contain",
+                }}
+              ></img>
             </div>
           </div>
         </div>

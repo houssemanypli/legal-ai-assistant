@@ -60,7 +60,7 @@ export const Features = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <section className="py-24 pt-12 px-32" ref={ref}>
+    <section className="py-24 pt-12 px-36" ref={ref}>
       <div className="container">
         <div
           className={`text-center mb-36 ${
@@ -75,7 +75,7 @@ export const Features = () => {
               lineHeight: "55px",
             }}
           >
-            Grâce à Jean-mi,
+            Grâce à judi,
             <br />
             bye les problèmes juridiques !
           </h2>
@@ -83,7 +83,7 @@ export const Features = () => {
 
         {/* Main features in unified horizontal layout */}
         <div>
-          <div className="grid gap-12 items-start">
+          <div className="grid gap-12 items-start px-6">
             {/* Left side - All features text content */}
             <div className="space-y-8">
               {mainFeatures.map((feature, index) => (
@@ -123,7 +123,7 @@ export const Features = () => {
                           <div
                             style={{
                               color: "#0D2073",
-                              fontSize: "16px",
+                              fontSize: "20px",
                               fontWeight: "300",
                               display: "flex",
                               alignItems: "center",
@@ -146,8 +146,8 @@ export const Features = () => {
                     <img
                       src={feature.image}
                       style={{
-                        height: "320px",
-                        width: "55vw",
+                        width: "45vw",
+                        objectFit: "contain",
                       }}
                     ></img>
                   </div>

@@ -11,6 +11,7 @@ import vocal from "@/assets/vocal.png";
 
 import tools from "@/assets/tools.png";
 import tools2 from "@/assets/tools2.png";
+import digiposte from "@/assets/digiposte.png";
 
 const useCasesMobile = [
   {
@@ -30,6 +31,7 @@ const useCasesPoste = [
     title: "Dans la poche,",
     description: "depuis l’application mobile",
     image: tools,
+    tag: digiposte,
   },
   {
     title: "Dans la poche,",
@@ -53,7 +55,7 @@ export const UseCases = () => {
             className="text-4xl lg:text-5xl font-bold mb-4"
             style={{ color: "#0D2073" }}
           >
-            Jean-mi vous accompagne partout
+            judi vous accompagne partout
           </h2>
         </div>
 
@@ -68,7 +70,8 @@ export const UseCases = () => {
           <div
             className={`${isVisible ? "animate-fade-in" : "opacity-0"}`}
             style={{
-              maxWidth: "25vw",
+              width: "400px",
+              aspectRatio: "1",
             }}
           >
             <Carousel className="w-full">
@@ -78,7 +81,7 @@ export const UseCases = () => {
                     <img
                       src={useCase.image}
                       style={{
-                        height: "250px",
+                        height: "270px",
                         width: "100%",
                       }}
                     ></img>
@@ -116,7 +119,8 @@ export const UseCases = () => {
           <div
             className={`${isVisible ? "animate-fade-in" : "opacity-0"}`}
             style={{
-              maxWidth: "25vw",
+              width: "400px",
+              aspectRatio: "1",
             }}
           >
             <Carousel className="w-full">
@@ -126,12 +130,23 @@ export const UseCases = () => {
                     <img
                       src={useCase.image}
                       style={{
-                        height: "250px",
+                        height: "270px",
                         width: "100%",
                         backgroundColor:
                           index % 2 === 1 ? "#0000FF" : "#5F4FFF",
                       }}
                     ></img>
+                    {useCase.tag && (
+                      <img
+                        src={useCase.tag}
+                        style={{
+                          position: "absolute",
+                          top: "0px",
+                          right: "10px",
+                          height: "60px",
+                        }}
+                      ></img>
+                    )}
                   </CarouselItem>
                 ))}
               </CarouselContent>

@@ -70,15 +70,16 @@ export const MarketTruths = () => {
             fontWeight: "800",
             fontSize: "36px",
             lineHeight: "45px",
+            paddingInline: "150px",
           }}
         >
           Toutes les bonnes raisons de faire appel à notre assistant juridique
         </h2>
       </div>
-      <div className="container max-w-6xl relative z-10 flex justify-center gap-12">
+      <div className="container px-16 relative z-10 flex justify-center gap-12">
         <img
           src={person}
-          style={{ height: "300px" }}
+          style={{ width: "30vw", objectFit: "contain" }}
           className="animate-fade-in"
         ></img>
         <div style={{ width: "100%" }}>
@@ -127,7 +128,7 @@ export const MarketTruths = () => {
                   )}
                 </button>
                 {expandedIndex === index && (
-                  <div className="pb-4">
+                  <div className="pb-4 animate-fade-slide-down">
                     <h3
                       style={{
                         color: "#0D2073",
