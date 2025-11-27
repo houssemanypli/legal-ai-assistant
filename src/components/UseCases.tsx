@@ -70,7 +70,7 @@ export const UseCases = () => {
           <div
             className={`${isVisible ? "animate-fade-in" : "opacity-0"}`}
             style={{
-              width: "400px",
+              width: "455px",
               aspectRatio: "1",
             }}
           >
@@ -81,7 +81,7 @@ export const UseCases = () => {
                     <img
                       src={useCase.image}
                       style={{
-                        height: "270px",
+                        height: "320px",
                         width: "100%",
                       }}
                     ></img>
@@ -119,7 +119,7 @@ export const UseCases = () => {
           <div
             className={`${isVisible ? "animate-fade-in" : "opacity-0"}`}
             style={{
-              width: "400px",
+              width: "455px",
               aspectRatio: "1",
             }}
           >
@@ -130,10 +130,12 @@ export const UseCases = () => {
                     <img
                       src={useCase.image}
                       style={{
-                        height: "270px",
+                        height: "320px",
                         width: "100%",
                         backgroundColor:
                           index % 2 === 1 ? "#0000FF" : "#5F4FFF",
+                        borderTopLeftRadius: "16px",
+                        borderTopRightRadius: "16px",
                       }}
                     ></img>
                     {useCase.tag && (

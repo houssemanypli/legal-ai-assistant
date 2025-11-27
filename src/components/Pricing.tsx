@@ -59,7 +59,7 @@ export const Pricing = () => {
 
   return (
     <section
-      className="py-12 px-4 mb-24"
+      className="py-12 px-36 mb-24"
       ref={ref}
       style={{ backgroundColor: "#F8FAFF" }}
     >
